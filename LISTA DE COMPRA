@@ -1,0 +1,28 @@
+listacompra = []
+
+while True:
+    print ("\n----- LISTA DE COMPRA -----")
+    print("1", ".Adicionar item")
+    print("2", ".Ver lista")
+    print("3", ".Remover um item")
+    print("4",".Quantidade de itens")
+    print("5",  ".Sair")
+    opcao = input("Escolha a opção desejada: ")
+    if opcao == "1":
+     listacompra.append(input("Qual produto voce deseja adicionar?: "))
+    elif opcao == "2":
+     print("Os produtos em sua lista são", listacompra)
+    elif opcao == "3":
+     removido = input("Qual item voce deseja remover?: ")
+     if removido in listacompra:
+         listacompra.remove(removido)
+     else:
+         print("Nao esta listado")
+    elif opcao == "4":
+     print("Voce tem",len( listacompra), "Itens na sua lista")
+    elif opcao == "5":
+     print ("Obrigado por usar nossos servicos")
+     break
+    else:
+     print("Apenas do 1 ao 5!")
+     
