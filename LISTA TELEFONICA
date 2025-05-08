@@ -1,0 +1,32 @@
+agenda = {}
+
+while True:
+    print ("\n----- LISTA TELEFONICA -----")
+    print("1", ".Adicionar contato")
+    print("2", ".Ver lista")
+    print("3", ".Remover um contato")
+    print("4",".Listar contatos")
+    print("5",  ".Sair")
+    opcao = input("Escolha a opção desejada: ")
+    if opcao == "1":
+     nome = input("Digite o nome: ")
+     numero = int(input("Digite o numero: "))
+     agenda.update({nome:numero})
+    elif opcao == '2':
+        nome = input("Qual contato voce deseja procurar?: ")
+        if nome in agenda:
+           print(agenda.get(nome))
+        else:
+           print ("nome nao listado")
+    elif opcao == "3":
+     nome = input("Quem voce deseja remover?: ")
+     if nome in agenda: 
+      del agenda[nome]
+     else:
+          print("nome nao esta listado")
+    elif opcao == "4":
+          print (agenda)
+    elif opcao == "5":
+     break
+    else:
+     print("Escolha do 1 ao 5!")
